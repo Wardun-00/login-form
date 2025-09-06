@@ -28,10 +28,47 @@
   <body>
     <!-- hero section -->
     <header class="w-auto h-56 bg-[#ff000]">
-      <img src="./assets/fulllogo.png" alt="" class="p-4 max-w-96" />
+      <div class="flex flex-col md:flex-row justify-between p-5 items-center">
+        <img src="./assets/fulllogo.png" alt="" class="max-w-96" />
+        <!-- dasyUi comedown  -->
+        <div class="grid auto-cols-max grid-flow-col gap-5 text-center md:mr-6">
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value: 15" aria-live="polite" aria-label="15"
+                >15</span
+              >
+            </span>
+            days
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value: 10" aria-live="polite" aria-label="10"
+                >10</span
+              >
+            </span>
+            hours
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value: 24" aria-live="polite" aria-label="24"
+                >24</span
+              >
+            </span>
+            min
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value: 59" aria-live="polite" aria-label="59"
+                >59</span
+              >
+            </span>
+            sec
+          </div>
+        </div>
+      </div>
       <div>
         <h2 class="text-5xl font-bold text-[#424040] text-center">
-          Student Login Form
+          Student Admission Form
         </h2>
       </div>
     </header>
@@ -39,8 +76,12 @@
     <!-- main section -->
     <main>
       <!-- form section -->
-      <div class="max-w-[1280px] mx-auto p-10 shadow-slate-500 shadow-inner">
-        <form action="" class="">
+      <div
+        id="parent-main
+      "
+        class="max-w-[1280px] mx-auto p-10 shadow-slate-500 shadow-inner flex flex-col md:flex-row justify-between mt-28 md:mt-3"
+      >
+        <form action="" class="md:w-[650px]" id="form-parent">
           <!-- name  -->
           <legend class="font-bold text-xl text-[#646262]">Name</legend>
           <input type="text" placeholder="First Name" class="input" />
@@ -87,9 +128,34 @@
           />
 
           <!-- Marital Status -->
-          <legend></legend>
+          <label class="mt-16">
+            <legend class="font-bold text-xl text-[#646262] mt-4">
+              Select your gender
+            </legend>
+            <input type="radio" name="gender" value="male" />
+            Male &nbsp; &nbsp;
+            <input type="radio" name="gender" value="female" />
+            Female
+          </label>
+          <!-- nationality -->
+          <legend class="font-bold text-xl mt-4 text-[#646262]">Country</legend>
+          <input
+            type="text"
+            placeholder="Nationality"
+            class="input mt-3 md:mt-0"
+          />
         </form>
+        <!-- robot image aside -->
+        <img
+          src="./assets/doll-1 (2).png"
+          alt=""
+          id="doll-1"
+          class="hidden md:block"
+        />
       </div>
     </main>
+
+    <!-- script js -->
+    <script src="./script.js"></script>
   </body>
 </html>
