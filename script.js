@@ -22,13 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // হিসাব করা
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Value সেট করা (textContent + --value for DaisyUI)
     daysEl.textContent = days;
     daysEl.style.setProperty("--value", days);
 
@@ -42,8 +40,20 @@ document.addEventListener("DOMContentLoaded", function () {
     secondsEl.style.setProperty("--value", seconds);
   }
 
-  // প্রথমবার কল
   updateCountdown();
-  // প্রতি 1s পর update
+ 
   setInterval(updateCountdown, 1000);
 });
+
+
+// next button click and then next part opening
+document.getElementById('next-btn').addEventListener('click', function(e){
+  e.preventDefault()
+  window.location.href='./payment.html';
+})
+
+
+// back button 
+document.getElementById('back-btn2').addEventListener('click', function(){
+  window.location.href='./index.html';
+})
